@@ -1,12 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="vendor/bootstrap-5.1.3-dist/css/bootstrap.css">
     <title>Product Landing Page</title>
 </head>
+
 <body>
-    
+    <div class="container" id="main">
+        <div class="jumbotron">
+
+            <h2 id="header">
+                <nav class="navbar fixed-top navbar-light bg-light" id="nav-bar">
+                    <a class="navbar-brand" href="https://github.com/aganyo360/MicroverseProject">Clarisse & Brice
+                        Products
+                        Landing
+                        Page</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button><br>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="https://www.visitrwanda.com/meet-in-rwanda/">meet-in-rwanda
+                                    <span class="sr-only">(current)</span></a>
+                            </li><br>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="https://www.visitrwanda.com/rwanda-reopens/">rwanda-reopens</a>
+                            </li><br>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.visitrwanda.com/investment/">investment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <img id="header-img"
+                    src="data:image/png;base64,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"
+                    width="40" height="30">Handcrafted, home-made masterpieces
+            </h2><br>
+            <form id="form">
+                <input type="email" id="email" placeholder="Enter your email address"><br><br>
+                <button type="submit" id="submit" class="btn btn-secondary">Get Started</button>
+            </form>
+        </div>
+        <div>
+            <div class="grid">
+                <img src="https://media.istockphoto.com/vectors/fire-flame-icon-black-minimalist-icon-isolated-on-white-background-vector-id857839032?k=20&m=857839032&s=612x612&w=0&h=kguqk6uFZC08uInjz5Abbc9Ypg5ndSwBCTOPjpqTa64="
+                    alt="Girl in a jacket" width="80" height="80">
+                <p>
+                    <strong>Premium Materials</strong><br>
+                    Our trombones use the shiniest brass which is sourced locally. This will increase the
+                    longevity of your purchase.
+                </p>
+
+            </div>
+            <div class="grid">
+                <img src="https://www.freeiconspng.com/uploads/delivery-icon-3.png" width="80" height="80">
+                <p>
+                    <strong>Fast Shipping</strong><br>
+                    We make sure you recieve your trombone as soon as we have finished making it. We also provide free
+                    returns if you are not satisfied.
+                </p>
+
+            </div>
+            <div class="grid">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW5-XPzCki2W_roVW_msQXgNm-fwsyqpBY6tH6oClaCdDUKJcdPfoKdd7AqQlWgPc0hSM&usqp=CAU"
+                    width="80" height="80">
+                <p>
+                    <strong>Fast Shipping</strong><br>
+                    We make sure you recieve your trombone as soon as we have finished making it. We also provide free
+                    returns if you are not satisfied.
+                </p>
+
+            </div>
+            <div>
+                <iframe width="420" height="345" src="https://youtu.be/y8Yv4pnO7qc" id="video">
+                </iframe>
+            </div>
+
+            <br><br>
+            <div class="flex-container">
+                <div>
+                    <div class="product" id="tenor">
+                        <div class="level">Tenor Trombone</div>
+                        <h2>$600</h2>
+                        <ol>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum.</li>
+                        </ol>
+                        <button class="btn">Select</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="product" id="tenor">
+                        <div class="level">Tenor Trombone</div>
+                        <h2>$600</h2>
+                        <ol>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum.</li>
+                        </ol>
+                        <button class="btn">Select</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="product" id="tenor">
+                        <div class="level">Tenor Trombone</div>
+                        <h2>$600</h2>
+                        <ol>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum.</li>
+                        </ol>
+                        <button class="btn">Select</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="vendor/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <script src="js/bundle.js"></script>
 </body>
+
 </html>
